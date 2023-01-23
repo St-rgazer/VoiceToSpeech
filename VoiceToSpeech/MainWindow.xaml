@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Protector"
         mc:Ignorable="d"
-        Title="Espi's Voice To Speech" Height="450" Width="800" ResizeMode="NoResize" Background="#2d2d44" Topmost="False" WindowStyle="None" AllowsTransparency="True">
+        Title="Espi's Voice To Speech" Height="450" Width="800" ResizeMode="NoResize" Background="#2d2d44" Topmost="True" WindowStyle="None" AllowsTransparency="True">
 	<Grid>
 		<Grid x:Name="mainGrid">
 			<DockPanel x:Name="topPanel" LastChildFill="False" Margin="0,0,0,424" Background="#FF1E1E2C" MouseDown="Panel_MouseDown" HorizontalAlignment="Right" Width="800">

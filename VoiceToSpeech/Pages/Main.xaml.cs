@@ -102,19 +102,10 @@ namespace VoiceToSpeech.Pages
         async private void PageLoaded(object sender, RoutedEventArgs e) 
         {
             ChangeLabel("Loading...");
-
-            // Compile the grammar.
             await speechRecognizer.CompileConstraintsAsync();
-
-            // Start the recognition.
             speechRecognizer.ContinuousRecognitionSession.ResultGenerated += ContinuousRecognitionSession_ResultGenerated;
             await speechRecognizer.ContinuousRecognitionSession.StartAsync();
-
-            // Wait for the user to press a key to exit the application.
             Trace.WriteLine("Recording...");
-
-            // Stop the recognition.
-
         }
 
         private void ContinuousRecognitionSession_ResultGenerated(SpeechContinuousRecognitionSession sender, SpeechContinuousRecognitionResultGeneratedEventArgs args)
@@ -134,8 +125,7 @@ namespace VoiceToSpeech.Pages
         async public void Deactivatedd(object sender, EventArgs e)
         {
             Trace.WriteLine("Deactivated");
-            await speechRecognizer.CompileConstraintsAsync();
-            speechRecognizer.ContinuousRecognitionSession.Resume();
+            MessageBox.Show("Voice recognition stops completely when window is out of focus, haven't found a fix. Blame Microsoft.");
         }
 
         public void Speak(string text, VoiceGender _gender)
